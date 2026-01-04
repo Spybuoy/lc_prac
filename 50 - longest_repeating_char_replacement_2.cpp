@@ -5,13 +5,13 @@ class Solution {
       if(s.length()!=t.length()){
         return false;
       }
-      for (auto x: s){
+      for (auto x: s){ // add num of times each char occurs
         char_set[x]++;
       }
-      for (auto x: t){
+      for (auto x: t){ // sub num of times each char occurs
         char_set[x]--;
       }
-      for(auto x: char_set){
+      for(auto x: char_set){ // if any resulting times is != 0, then not an anagram
         if(x.second>0) return false;
       }
       return true;
